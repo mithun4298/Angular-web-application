@@ -1,0 +1,29 @@
+
+<nav class="app-nav">
+  <button mat-button>SHOPPING APP</button>
+  <button mat-button routerLink="/home">Home</button>
+  <button routerLink="/shopping" mat-button>Products</button>
+  
+  <div class="right-menu">
+    <button class="cart"   mat-button><mat-icon [matBadge]="cartQuantity" matBadgeSize="small" matBadgePosition="before" [matBadgeHidden]="cartQuantity <= 0">shopping_cart</mat-icon>Cart</button>
+    <button *ngIf="!store.loggedIn" mat-button routerLink="/login/SignIn">Sign In/Sign Up</button>
+    <div *ngIf="store.loggedIn" class="account-box">
+      <span>{{store.userData?.firstName}} {{store.userData?.lastName}}</span>
+      
+      <mat-icon [matMenuTriggerFor]="menu"  class="account">account_circle</mat-icon>
+      <mat-menu #menu="matMenu">
+        
+        <button (click)="logOut()" mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span>Log Out</span>
+        </button>
+       
+      </mat-menu>
+    </div>
+   
+
+  </div>
+
+  
+</nav>
+<router-outlet></router-outlet>

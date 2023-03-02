@@ -1,0 +1,88 @@
+<div class="login-container">
+    <div class="login-context">
+        <div *ngIf="!editProduct">Add Product to inventory here</div>
+        <div *ngIf="editProduct">Update Product to inventory here</div>
+    </div>
+    <div class="form-box">
+
+        <form  class="register-form" [formGroup]='productForm' (ngSubmit)='addProduct()'>
+            <div class="account-circle">
+                <mat-icon class="material-icons-outlined">inventory_2</mat-icon>
+                <div *ngIf="!editProduct">Add Product Details</div>
+                <div *ngIf="editProduct">Update Product Details</div>
+
+            </div>
+            <div class="register-box">
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Product Name</mat-label>
+                        <input matInput type="text" formControlName='name'>
+                        <mat-error>please enter product name</mat-error>
+                        
+                    </mat-form-field>
+                </div>
+                
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Product Price</mat-label>
+                        <input matInput type="number" formControlName='price' min="0">
+                        <mat-error>please enter price</mat-error>
+
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Product Quantity</mat-label>
+                        <input matInput type="number" min="0" formControlName='quantity'>
+                        <mat-error>please enter quantity</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Select Status</mat-label>
+                        <mat-select formControlName='status'>
+                            <mat-option value="HURRY UP TO PURCHASE">HURRY UP TO PURCHASE</mat-option>
+                            <mat-option value="OUT OF STOCK">OUT OF STOCK</mat-option>
+                        </mat-select>
+                        <mat-error>please select status</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Product Description</mat-label>
+                        <textarea matInput formControlName='description'></textarea>
+                        <mat-error >please enter description</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="register-input " [ngClass]="{'chip-list':features.length > 0}">
+                    <mat-form-field class="example-chip-list" appearance="outline">
+                        <mat-label>Enter Product Features</mat-label>
+                        <mat-chip-list #chipList>
+                          <mat-chip *ngFor="let feature of features" (removed)="remove(feature)">
+                            {{feature}}
+                            <button matChipRemove>
+                              <mat-icon>cancel</mat-icon>
+                            </button>
+                          </mat-chip>
+                          <input placeholder="Add feature here... and press Enter"
+                                 [matChipInputFor]="chipList"
+                                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                 [matChipInputAddOnBlur]="addOnBlur"
+                                 (matChipInputTokenEnd)="add($event)">
+                        </mat-chip-list>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="register-input">
+                <button *ngIf="!editProduct" class="submit" type="submit" [disabled]='!productForm.valid' mat-raised-button>Add Product</button>
+                <button *ngIf="editProduct" class="submit" type="submit" [disabled]='!productForm.valid' mat-raised-button>Update Product</button>
+
+            </div>
+            <div *ngIf='errorMessage' class="error">{{errorMessage}}</div>
+        </form>
+
+        
+
+        
+    </div>
+</div>

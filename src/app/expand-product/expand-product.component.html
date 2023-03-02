@@ -1,0 +1,39 @@
+<div class="card-conatiner">
+    <mat-icon (click)="closeDialog()" class="close">close</mat-icon>
+    <mat-card class="card-1">
+        <mat-card-title>{{data.name}}</mat-card-title>
+        <mat-card-content>
+            <p>{{data.description}}</p>
+            <div>
+                <h4 style="font-weight: 500;">Features :</h4>
+                <ul>
+                    <li *ngFor="let feature of data.features">{{feature}}</li>
+                </ul>
+            </div>
+            
+
+
+        </mat-card-content>
+        
+
+    </mat-card>
+    <hr/>
+    <mat-card>
+        <mat-card-footer>
+            <div  [ngClass]="{'green' : data.status=='HURRY UP TO PURCHASE','red' : data.status=='OUT OF STOCK'}">
+                <div class="indicator" [ngClass]="{'green-indicator' : data.status=='HURRY UP TO PURCHASE','red-indicator' : data.status=='OUT OF STOCK'}" ></div><span>{{data.status}}</span>
+            </div>
+            <div class="price-div"><span class="price">${{data.price}}</span> <span
+                    style="padding-left: 5px;">(inclusive of all taxes)</span></div>
+            <div class="btn-row">
+                <button class="add-to-cart" (click)="addToCart(data)" mat-button>Add To Cart</button>
+                <button *ngIf="isAdmin"  matTooltip="Product Quantity" class="edit-icon" [ngClass]="{'quantity':data.quantity > 0,'no-quantity':data.quantity <= 0}" mat-icon-button><mat-icon [matBadge]="data.quantity"  class="material-icons-outlined">inventory</mat-icon></button>
+
+                <button *ngIf="isAdmin" (click)="editProduct(data)" matTooltip="Edit Product Details" class="edit-icon" mat-icon-button><mat-icon >edit</mat-icon></button>
+                <button *ngIf="isAdmin" (click)="deleteProduct(data)" matTooltip="Delete Product" class="edit-icon" mat-icon-button><mat-icon>delete</mat-icon></button>
+
+            </div>
+            
+        </mat-card-footer>
+    </mat-card>
+</div>

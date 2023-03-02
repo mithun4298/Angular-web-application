@@ -1,0 +1,216 @@
+.mat-card{
+    width: 300px;
+    height: 400px;
+    margin: 10px 30px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 15%) !important;
+}
+.mat-card-title{
+    font-size: 20px;
+}
+.add-product{
+    position: absolute;
+    right: 20px;
+    background-color: var(--primary-color);
+}
+.edit-icon:hover{
+    background-color: #f5f5f5;
+}
+.search-menu{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%)
+}
+::ng-deep .mat-menu-panel{
+    max-width: 400px !important;
+    height: 200px;
+}
+::ng-deep .mat-menu-content{
+    height: calc(100% - 16px);
+}
+.wrapper-container{
+    width: 300px;
+    height: 100%;
+    padding: 0 20px;
+}
+.slider{
+    border-radius: 5px;
+    background: #ddd;
+    position: relative;
+    height: 100px;
+    height: 8px;
+    margin-top: 10px;
+}
+.slider input{
+    position: absolute;
+    top: -2px;
+    height: 5px;
+    left: 0;
+    width: 100%;
+    -webkit-appearance: none;
+    background: none;
+    pointer-events: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    background: #17A2B8;
+    pointer-events: auto;
+}
+input[type="range"]::-moz-range-thumb{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    -moz-appearance: none;
+    background: #17A2B8;
+    pointer-events: auto;
+}
+
+.top-box{
+    height: calc(100% - 50px);
+    overflow: auto;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 35px;
+    border: 1px solid rgb(0 0 0 / 54%);
+    position: relative;
+    max-width: 450px;
+    width: calc(100% - 100px);
+}
+.search-bar>button{
+position: absolute;
+left: 100%;
+}
+.search-bar .mat-icon{
+    margin-right: 5px;
+}
+
+.search-bar input[type=text] {
+    border-radius: 35px;
+    padding: 10px;
+    border: none;
+    outline: none !important;
+    width: calc(100% - 45px);
+  }
+  .wrapper{
+    position: relative;
+    height: 100px;
+  }
+  .mat-slider{
+      position: absolute;
+      width: calc(100% + 8px);
+      pointer-events: none;
+      margin-left: -4px;
+      top: -20px;
+  }
+  ::ng-deep .mat-slider-thumb{
+      pointer-events: auto;
+      background-color: var(--primary-color) !important;
+
+  }
+  .price-select{
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+  }
+  .divider{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .price-select input[type="number"] {
+    width: calc(100% - 30px);
+    padding: 10px;
+  }
+  ::ng-deep .mat-slider-track-wrapper{
+      display: none;
+  }
+  ::ng-deep .mat-slider-thumb-label{
+      background:var(--primary-color) !important;
+  }
+ 
+  
+.card-container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: calc(100% - 117px);
+    overflow: auto;
+}
+.price-div{
+    padding: 10px 35px;
+    display: flex;
+}
+.progress{
+    position: absolute;
+    height: 8px;
+    background-color: var(--primary-color);
+    left: 0;
+    right: 0;
+}
+.mat-card-content{
+    max-height: 250px;
+    overflow: hidden;
+}
+.indicator{
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.red{
+    padding: 10px 20px;
+    color: #f44336;
+}
+.green{
+    padding: 10px 20px;
+    color: green;
+}
+::ng-deep .quantity .mat-badge-content{
+    background-color: var(--primary-color) !important;
+    color: black !important;
+}
+::ng-deep .no-quantity .mat-badge-content{
+    background-color: #f44336 !important;
+}
+.green-indicator{
+    background-color: green;
+}
+.red-indicator{
+    background-color: #f44336;
+}
+.price{
+    font-weight: 500;
+    font-size: 24px;
+}
+.mat-button{
+    border-radius: 0 !important;
+   
+}
+.add-to-cart{
+    background-color: var(--primary-color);
+
+}
+.more-details{
+    border: 1px solid #b0b0b0;
+}
+.mat-card-footer{
+   
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+}
+.mat-card-footer .btn-row{
+    display: flex !important;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,19 @@
+<div class="home-container">
+    <!-- <div class="img-box">
+        <div class="img-left"></div>
+        <div class="img-right"></div>
+    </div> -->
+    <div class="text-box">
+        <h1>WELCOME TO SHOPPING APP</h1>
+        <!-- <h3 style="font-family: cursive">Products designed specially for you</h3> -->
+
+        
+        <div *ngIf="!store.loggedIn" class="btn-row">
+            <button routerLink="/login/SignIn">Sign In</button>
+            <button routerLink="/login/SignUp">Sign Up</button>
+        </div>
+        <div *ngIf="store.loggedIn" class="btn-row2">
+            <button routerLink="/shopping">Lets Do Shopping</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="top-box">
+    <div class="search-menu">
+        <div class="search-bar">
+            <input type="text" placeholder="serach products" (keyup)="filterProducts()" [(ngModel)]="searchText">
+            <mat-icon style="    position: absolute;
+            right: 0;">search</mat-icon>
+            <button [matMenuTriggerFor]="menu" mat-button>
+                <mat-icon>tune</mat-icon> Filters
+            </button>
+            
+            <mat-menu #menu="matMenu" xPosition="before" >
+                <div class="wrapper-container" (click)="$event.stopPropagation()">
+                    <h3 style="font-weight: 500;">Price :</h3>
+                    <div class="price-select">
+                        <div>
+                            <div>Min Price</div>
+                            <div><input #minSlider type="number" max="10000" min="0" step="1000" (change)="priceFilter('min',minSlider)" [(ngModel)]="minFilter"></div>
+                        </div>
+                        <div class="divider"> - </div>
+                        <div>
+                            <div>Max Price</div>
+                            <div><input #maxSlider type="number" max="10000" min="0" step="1000" (change)="priceFilter('max',maxSlider)" [(ngModel)]="maxFilter"></div>
+                        </div>
+                    </div>
+                    <div class="slider" (click)="$event.stopPropagation()">
+                        <div  class="progress" [style.left]="left" [style.right]="right"></div>
+                        <mat-slider #slider1 [displayWith]="formatLabel" (input)="priceFilter('min',slider1)" (click)="$event.stopPropagation()" class="slider1" thumbLabel step="1000" min="0" max="10000" [(ngModel)]="minFilter"></mat-slider>
+                        <mat-slider #slider2 [displayWith]="formatLabel" (input)="priceFilter('max',slider2)" (click)="$event.stopPropagation()" class="slider2" thumbLabel step="1000" min="0" max="10000" [(ngModel)]="maxFilter"></mat-slider>
+
+                    </div>
+                </div>
+            </mat-menu>
+
+        </div>
+        <button *ngIf="isAdmin" class="add-product" routerLink="/addProduct" mat-button>
+            <mat-icon>add</mat-icon> Add Product
+        </button>
+
+    </div>
+
+    <div class="card-container">
+        <mat-card *ngFor='let product of filteredProducts'>
+            <mat-card-title>{{product.name}}</mat-card-title>
+            <mat-card-content>
+                <p>{{product.description}}</p>
+                <div>
+                    <h4 style="font-weight: 500;">Features :</h4>
+                    <ul>
+                        <li *ngFor="let feature of product.features">{{feature}}</li>
+                    </ul>
+                </div>
+                
+
+
+            </mat-card-content>
+            <mat-card-footer>
+                <div  [ngClass]="{'green' : product.status=='HURRY UP TO PURCHASE','red' : product.status=='OUT OF STOCK'}">
+                    <div class="indicator" [ngClass]="{'green-indicator' : product.status=='HURRY UP TO PURCHASE','red-indicator' : product.status=='OUT OF STOCK'}" ></div><span>{{product.status}}</span>
+                </div>
+                <div class="price-div"><span class="price">${{product.price}}</span> <span
+                        style="padding-left: 5px;">(inclusive of all taxes)</span></div>
+                <div class="btn-row">
+                    <button class="add-to-cart" (click)="addToCart(product)" mat-button>Add To Cart</button>
+                    <button *ngIf="isAdmin" matTooltip="Product Quantity" class="edit-icon" [ngClass]="{'quantity':product.quantity > 0,'no-quantity':product.quantity <= 0}" mat-icon-button><mat-icon [matBadge]="product.quantity"  class="material-icons-outlined">inventory</mat-icon></button>
+                    <button *ngIf="!isAdmin" (click)="expandProduct(product)"   class="more-details" mat-button>More Details</button>
+
+                    <button *ngIf="isAdmin" (click)="editProduct(product)" matTooltip="Edit Product Details" class="edit-icon" mat-icon-button><mat-icon >edit</mat-icon></button>
+                    <button *ngIf="isAdmin" (click)="deleteProduct(product)" matTooltip="Delete Product" class="edit-icon" mat-icon-button><mat-icon>delete</mat-icon></button>
+                    <button *ngIf="isAdmin" (click)="expandProduct(product)"  matTooltip="More Details" class="edit-icon" mat-icon-button><mat-icon>open_in_full</mat-icon></button>
+
+                </div>
+                
+            </mat-card-footer>
+
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.more-details{
+    border: 1px solid #b0b0b0;
+}
+.msg{
+    padding: 20px;
+    font-size: 20px;
+}
+.btn-row{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+.del{
+    background-color: var(--primary-color);
+}

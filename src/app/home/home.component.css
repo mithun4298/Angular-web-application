@@ -1,0 +1,48 @@
+
+.btn-row{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 40px;
+}
+.text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding-top: 277px;
+  padding-left: 130px;
+
+    
+}
+.btn-row button{
+    background-color: rgb(166, 175, 159);
+    color: white;
+    height: 40px;
+    width: 120px;
+}
+
+.btn-row button:hover::after{
+    width: 50%;
+    background-color: rgb(0, 255, 42);
+
+}
+.btn-row2 button{
+    background-color: rgb(117, 221, 32);
+    color: white;
+    height: 40px;
+    width: 150px;
+}
+.home-container{
+    /* height: calc(100% - 20px);
+    background-color: var(--primary-color); */
+    background-image: url(../../assets/yellow.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-container>.img-box{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 60%;
+}

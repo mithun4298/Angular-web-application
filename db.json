@@ -1,0 +1,186 @@
+{
+  "product": [
+    {
+      "name": "iphone",
+      "description": "dhsalkhdlsad",
+      "price": 1200,
+      "quantity": 12,
+      "status": "OUT OF STOCK",
+      "features": [
+        "hkbsakdj",
+        "hsadbk"
+      ],
+      "id": 1
+    },
+    {
+      "name": "iphone mobile 12",
+      "description": "5G speed. A14 Bionic, the fastest chip in a smartphone. An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all",
+      "price": 1000,
+      "quantity": 12,
+      "status": "HURRY UP TO PURCHASE",
+      "features": [
+        "Screen Size: 6.1 inches",
+        "Display Resolution: 2532 x 1170",
+        "Front Camera Resolution: 12 MP",
+        "Rear Camera Resolution: 12 MP",
+        "Storage Capacity :64 GB, 128 GB, 256 GB",
+        "Battery Capacity 2,815 mAh",
+        "Body Material Aluminium, Glass, Metal",
+        "Color (PRODUCT)RED, Black, Blue, Eternal Green, Graphite, Green, Grey, Midnight, Midnight Green, Pink, Purple, Red, Silver, Space Grey, Starlight, Violet, White"
+      ],
+      "id": 2
+    },
+    {
+      "name": "iphone mobile 13",
+      "description": "5G speed. A14 Bionic, the fastest chip in a smartphone. An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all",
+      "price": 1000,
+      "quantity": 12,
+      "status": "HURRY UP TO PURCHASE",
+      "features": [
+        "Screen Size: 6.1 inches",
+        "Display Resolution: 2532 x 1170",
+        "Front Camera Resolution: 12 MP",
+        "Rear Camera Resolution: 12 MP",
+        "Storage Capacity :64 GB, 128 GB, 256 GB",
+        "Battery Capacity 2,815 mAh",
+        "Body Material Aluminium, Glass, Metal",
+        "Color (PRODUCT)RED, Black, Blue, Eternal Green, Graphite, Green, Grey, Midnight, Midnight Green, Pink, Purple, Red, Silver, Space Grey, Starlight, Violet, White"
+      ],
+      "id": 3
+    },
+    {
+      "name": "iphone mobile 14",
+      "description": "5G speed. A14 Bionic, the fastest chip in a smartphone. An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all",
+      "price": 1000,
+      "quantity": 12,
+      "status": "HURRY UP TO PURCHASE",
+      "features": [
+        "Screen Size: 6.1 inches",
+        "Display Resolution: 2532 x 1170",
+        "Front Camera Resolution: 12 MP",
+        "Rear Camera Resolution: 12 MP",
+        "Storage Capacity :64 GB, 128 GB, 256 GB",
+        "Battery Capacity 2,815 mAh",
+        "Body Material Aluminium, Glass, Metal",
+        "Color (PRODUCT)RED, Black, Blue, Eternal Green, Graphite, Green, Grey, Midnight, Midnight Green, Pink, Purple, Red, Silver, Space Grey, Starlight, Violet, White"
+      ],
+      "id": 4
+    },
+    {
+      "name": "iphone mobile 15",
+      "description": "5G speed. A14 Bionic, the fastest chip in a smartphone. An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all",
+      "price": 1000,
+      "quantity": 12,
+      "status": "HURRY UP TO PURCHASE",
+      "features": [
+        "Screen Size: 6.1 inches",
+        "Display Resolution: 2532 x 1170",
+        "Front Camera Resolution: 12 MP",
+        "Rear Camera Resolution: 12 MP",
+        "Storage Capacity :64 GB, 128 GB, 256 GB",
+        "Battery Capacity 2,815 mAh",
+        "Body Material Aluminium, Glass, Metal",
+        "Color (PRODUCT)RED, Black, Blue, Eternal Green, Graphite, Green, Grey, Midnight, Midnight Green, Pink, Purple, Red, Silver, Space Grey, Starlight, Violet, White"
+      ],
+      "id": 5
+    },
+    {
+      "name": "iphone mobile 16",
+      "description": "5G speed. A14 Bionic, the fastest chip in a smartphone. An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all",
+      "price": 1000,
+      "quantity": 12,
+      "status": "HURRY UP TO PURCHASE",
+      "features": [
+        "Screen Size: 6.1 inches",
+        "Display Resolution: 2532 x 1170",
+        "Front Camera Resolution: 12 MP",
+        "Rear Camera Resolution: 12 MP",
+        "Storage Capacity :64 GB, 128 GB, 256 GB",
+        "Battery Capacity 2,815 mAh",
+        "Body Material Aluminium, Glass, Metal",
+        "Color (PRODUCT)RED, Black, Blue, Eternal Green, Graphite, Green, Grey, Midnight, Midnight Green, Pink, Purple, Red, Silver, Space Grey, Starlight, Violet, White"
+      ],
+      "id": 6
+    },
+    {
+      "name": "iphone mobile 17",
+      "description": "5G speed. A14 Bionic, the fastest chip in a smartphone. An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on every camera. iPhone 12 has it all",
+      "price": 1000,
+      "quantity": 12,
+      "status": "HURRY UP TO PURCHASE",
+      "features": [
+        "Screen Size: 6.1 inches",
+        "Display Resolution: 2532 x 1170",
+        "Front Camera Resolution: 12 MP",
+        "Rear Camera Resolution: 12 MP",
+        "Storage Capacity :64 GB, 128 GB, 256 GB",
+        "Battery Capacity 2,815 mAh",
+        "Body Material Aluminium, Glass, Metal",
+        "Color (PRODUCT)RED, Black, Blue, Eternal Green, Graphite, Green, Grey, Midnight, Midnight Green, Pink, Purple, Red, Silver, Space Grey, Starlight, Violet, White"
+      ],
+      "id": 7
+    }
+  ],
+  "userlogin": [
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "confirmPassword": "Mks@1612",
+      "firstName": "Mithun",
+      "lastName": "kumar",
+      "loginId": "Mithun9546",
+      "phoneNumber": 9546331444,
+      "id": 1
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 2
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 3
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 4
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 5
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 6
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 7
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 8
+    },
+    {
+      "email": "mks64848@gmail.com",
+      "password": "Mks@1612",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

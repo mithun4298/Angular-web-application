@@ -1,0 +1,182 @@
+<p>login works!</p>
+<div class="login-container">
+    <div *ngIf='signIn' class="login-context">
+        <div>New to shopping app? </div>
+        <div>Sign up here</div>
+        <div><button type="button" class="black-btn" routerLink="/login/SignUp">Sign Up</button></div>
+    </div>
+    <div *ngIf='!signIn' class="login-context">
+        <div>Already have an account? </div>
+        <div>Sign in here</div>
+        <div><button type="button" class="black-btn" routerLink="/login/SignIn">Sign In</button></div>
+    </div>
+    <div class="form-box">
+        <form *ngIf='signIn && !changePassword' class="login-form" [formGroup]='loginForm' (ngSubmit)='login()'>
+            <div class="account-circle">
+                <mat-icon>account_circle_outline</mat-icon>
+                <div>Login into your account</div>
+
+            </div>
+            <div class="login-input" style="margin-top: 25px;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Your Email</mat-label>
+                    <input matInput type="text" formControlName='email'>
+                    <mat-icon matPrefix>mail_outline</mat-icon>
+                    <mat-error *ngIf='loginForm.get("email")?.errors?.required'>please enter email Id</mat-error>
+                        <mat-error *ngIf='loginForm.get("email")?.errors?.email'>please enter valid email Id</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="login-input">
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Your Password</mat-label>
+                    <input matInput type="password" formControlName='password'>
+                    <mat-icon matPrefix>password_outline</mat-icon>
+                    <mat-error>Please enter your password</mat-error>
+
+                </mat-form-field>
+            </div>
+            <div class="login-input">
+                <button class="submit" type="submit" [disabled]="!loginForm.valid" mat-raised-button>Sign In</button>
+            </div>
+
+            <div class="forgot-password" (click)="changePassword = !changePassword">Forgot your password ?</div>
+
+            <div *ngIf='errorMessage' class="error">{{errorMessage}}</div>
+
+        </form>
+
+        <form *ngIf='!signIn' class="register-form" [formGroup]='registerForm' #registerFormDirective="ngForm" (ngSubmit)='register()'>
+            <div class="account-circle">
+                <mat-icon>account_circle_outline</mat-icon>
+                <div>Register your account</div>
+
+            </div>
+            <div class="register-box">
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your Email</mat-label>
+                        <input matInput type="text" formControlName='email'>
+                        <mat-icon matPrefix>mail_outline</mat-icon>
+                        <mat-error *ngIf='registerForm.get("email")?.errors?.required'>please enter email Id</mat-error>
+                        <mat-error *ngIf='registerForm.get("email")?.errors?.email'>please enter valid email Id</mat-error>
+                        
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your Password</mat-label>
+                        <input matInput type="password" formControlName='password'>
+                        <mat-icon matPrefix>password_outline</mat-icon>
+                        <mat-error *ngIf='registerForm.get("password")?.errors?.required'>please enter password</mat-error>
+                        <mat-error *ngIf='registerForm.get("password")?.errors?.message'>{{registerForm.get("password")?.errors?.message}}</mat-error>
+
+                        
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm Your Password</mat-label>
+                        <input matInput type="password" formControlName='confirmPassword'>
+                        <mat-icon matPrefix>password_outline</mat-icon>
+                        <mat-error *ngIf='registerForm.get("confirmPassword")?.errors?.required'>please confirm password</mat-error>
+                        <mat-error *ngIf='registerForm.get("confirmPassword")?.errors?.message'>{{registerForm.get("confirmPassword")?.errors?.message}}</mat-error>
+
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your First Name</mat-label>
+                        <input matInput type="text" formControlName='firstName'>
+                        <mat-icon matPrefix>person</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your Last Name</mat-label>
+                        <input matInput type="text" formControlName='lastName'>
+                        <mat-icon matPrefix>person</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your LoginId</mat-label>
+                        <input matInput type="text" formControlName='loginId'>
+                        <mat-icon matPrefix>login</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your Phone Number</mat-label>
+                        <input matInput type="number" formControlName='phoneNumber'>
+                        <mat-icon matPrefix>call</mat-icon>
+                        <mat-error *ngIf='registerForm.get("phoneNumber")?.errors?.required'>please enter phone number</mat-error>
+                        <mat-error *ngIf='registerForm.get("phoneNumber")?.errors?.pattern'>Phone number should be 10 digits long</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="register-input">
+                <button class="submit" type="submit" [disabled]='!registerForm.valid' mat-raised-button>Sign Up</button>
+
+            </div>
+            <div *ngIf='errorMessage' class="error">{{errorMessage}}</div>
+        </form>
+
+        <form *ngIf='signIn && changePassword' class="login-form" [formGroup]='forgotForm' (ngSubmit)='forgotPassword()'>
+            <div class="account-circle">
+                <mat-icon>password</mat-icon>
+                <div>Change your password</div>
+
+            </div>
+            <div class="login-box">
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your Email</mat-label>
+                        <input matInput type="text" formControlName='email'>
+                        <mat-icon matPrefix>mail_outline</mat-icon>
+                        <mat-error *ngIf='forgotForm.get("email")?.errors?.required'>please enter email Id</mat-error>
+                        <mat-error *ngIf='forgotForm.get("email")?.errors?.email'>please enter valid email Id</mat-error>
+                        
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Your Password</mat-label>
+                        <input matInput type="password" formControlName='password'>
+                        <mat-icon matPrefix>password_outline</mat-icon>
+                        <mat-error *ngIf='forgotForm.get("password")?.errors?.required'>please enter password</mat-error>
+                        <mat-error *ngIf='forgotForm.get("password")?.errors?.message'>{{forgotForm.get("password")?.errors?.message}}</mat-error>
+
+                        
+                    </mat-form-field>
+                </div>
+                <div class="register-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm Your Password</mat-label>
+                        <input matInput type="password" formControlName='confirmPassword'>
+                        <mat-icon matPrefix>password_outline</mat-icon>
+                        <mat-error *ngIf='forgotForm.get("confirmPassword")?.errors?.required'>please confirm password</mat-error>
+                        <mat-error *ngIf='forgotForm.get("confirmPassword")?.errors?.message'>{{forgotForm.get("confirmPassword")?.errors?.message}}</mat-error>
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="btn-row">
+                <div>
+                <button class="submit" type="submit" [disabled]='!forgotForm.valid' mat-raised-button>Change Password</button>
+
+                </div>
+                <div>
+                    <button  type="button" (click)="changePassword = !changePassword" color="warn"  mat-raised-button>Back to login page</button>
+
+                </div>
+
+            </div>
+
+            <div *ngIf='errorMessage' class="error">{{errorMessage}}</div>
+        </form>
+
+        <form>
+
+        </form>
+    </div>
+</div>

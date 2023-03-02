@@ -1,0 +1,74 @@
+.app-nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: rgb(72, 37, 201);
+    text-emphasis-color: red;
+}
+.account{
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.account-box{
+    display: flex;
+    align-items: center;
+    color:green;
+}
+::ng-deep .cart .mat-badge-content{
+    background-color: rgb(0 0 0 / 87%) !important;
+    color: #fff !important;
+}
+.right-menu{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+.app-nav button::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    background-color: #5bb338;
+    transform: translate(-50%);
+    transition: width 0.3s;
+}
+.right-menu .cart::after{
+    bottom: 0;
+}
+.app-nav button:hover::after{
+    width: 50%;
+    background-color: rgb(0, 255, 42);
+
+}
+.app-nav>button{
+    position: relative;
+}
+.app-nav>.mat-button{
+    margin: 7px 10px;
+    padding: 0 10px;
+    color: white;
+    
+
+}
+.right-menu>.mat-button{
+    margin: 7px 10px;
+    padding: 0 10px;
+    color: white;
+    
+
+}
+
+.app-nav>.mat-button:hover{
+    background-color: transparent !important;
+}
+::ng-deep .app-nav .mat-button-focus-overlay{
+    background: unset !important;
+}
+

@@ -1,0 +1,62 @@
+.card-conatiner{
+    height: 100%;
+    position: relative;
+}
+.close{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 4;
+    cursor: pointer;
+}
+::ng-deep .quantity .mat-badge-content{
+    background-color: var(--primary-color) !important;
+    color: black !important;
+}
+::ng-deep .no-quantity .mat-badge-content{
+    background-color: #f44336 !important;
+}
+.card-conatiner .mat-card{
+    box-shadow: none;
+}
+.card-1{
+    height: calc(100% - 180px);
+}
+.green-indicator{
+    background-color: green;
+}
+.red-indicator{
+    background-color: #f44336;
+}
+.price{
+    font-weight: 500;
+    font-size: 24px;
+}
+.red{
+    color: #f44336;
+}
+.green{
+    color: green;
+}
+.indicator{
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.price-div{
+    padding: 10px 0px;
+    display: flex;
+}
+.btn-row>button{
+    margin: 5px;
+}
+.add-to-cart{
+    background-color: var(--primary-color);
+
+}
+::ng-deep .card-1 .mat-card-content{
+    overflow: auto;
+    height: 250px;
+}
